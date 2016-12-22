@@ -1,0 +1,122 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+$border-color: #e7e7e7;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 60px;
+  background-color: #e9ebee;
+  width: 100%;
+  height: 100%;
+}
+.background{
+  background-image: url('products/background.jpg');
+}
+
+h1 {
+   color : #90949c;
+}
+
+.main-content {
+  background-color: white;
+  min-height: 503px;
+  border-radius: 10px
+}
+
+/*header*/
+
+#logo {
+  float: left;
+  font-size: 20px;
+  color: #e7e7e7;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#logo-icon {
+  width: 45                                                                                     px;
+  height: 30px;
+}
+
+.navbar-default {
+  background-color: #181818;
+}
+
+.navbar-default a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#menu-top a {
+  color: white;
+}
+
+#menu-top li:hover {
+  background-color: #747474;
+}
+
+.dropdown-menu {
+  background-color: #747474;
+  a:hover {
+    background-color: #747474 !important;
+  }
+}
+
+.dropdown a:focus {
+  background-color: #747474 !important;
+}
+
+footer {
+  color: #e7e7e7;
+  border-top: 1px solid $border-color;
+  margin-top: 10px;
+  background-color: #181818;
+  padding: 10px;
+  position: relative;
+  bottom: 0px;
+}
+ 
+/*home*/
+
+.padding-zero {
+padding: 0px;
+}
+
+.padding-twenty {
+  padding: 20px;
+}
+
+ /*slide*/
+
+.carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+    height:300px;
+    width: 70%;
+    margin: auto;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+h1 {
+  text-align: left;
+  color: black;
+}
