@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  header:
+    logo: "Ecommerce"
+    home: "Home"
+    signup: "Sign up"
+    login: "Login"
+  footer:
+    design: "Design by"
+    ecommerce: " Ecommerce"
+    designer: " Tam Tran"
+    address: "Address: "
+    phone: "Phone number: "
+    phone_number: "0987322369"
+    my_address: "Ngo Sy Lien Street, Da Nang City"
+  home:
+    ecommerce: "Ecommerce"
