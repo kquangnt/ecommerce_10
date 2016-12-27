@@ -25,6 +25,10 @@ en:
     home: "Home"
     signup: "Sign up"
     login: "Login"
+    logout: "Logout"
+    profile: "Profile"
+    activity: "Activity"
+    password: "Password"
   footer:
     design: "Design by"
     ecommerce: " Ecommerce"
