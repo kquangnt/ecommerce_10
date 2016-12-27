@@ -120,3 +120,50 @@ h1 {
   text-align: left;
   color: black;
 }
+
+/*Users*/
+
+tr.display-users{
+  background: #394BA0;
+  border: 2px solid #a1a1a1; 
+  color:white;
+   
+  th.index {
+    text-align: center;
+    width: 60px;
+  }
+  th.avata_image {
+    text-align: center;
+    width: 180px;
+  }
+  th.service {
+    text-align: center;
+    width: 150px;
+  }
+  th.action {
+    text-align: center;
+    width: 200px;
+  }
+}
+tr.user {
+  td.index {
+    text-align: center;
+    width: 60px;
+  }
+  td.avata_image {
+    text-align: center;
+    width: 100px;
+  }
+  td.service {
+    text-align: center;
+    width: 150px;
+  }
+  td.action {
+    text-align: left;
+    width: 200px;
+  }
+}
+
+.paginate {
+  text-align: center;
+}

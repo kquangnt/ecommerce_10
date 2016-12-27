@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20161221160046) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer  "status"
+    t.integer  "status", default: 0
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -81,11 +81,11 @@ ActiveRecord::Schema.define(version: 20161221160046) do
     t.string   "product"
     t.string   "image"
     t.text     "description"
-    t.integer  "status"
+    t.integer  "status", default: 0
     t.integer  "user_id"
     t.integer  "category_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_suggestions_on_category_id"
     t.index ["user_id"], name: "index_suggestions_on_user_id"
   end

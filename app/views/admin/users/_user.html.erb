@@ -1,0 +1,25 @@
+<tr class="user">
+  <td class="index"><%= index_for user_counter, @users.current_page,
+    Settings.user.per_page %></td>
+  <td class="avata_image"><%= image_tag user.image.url, size: Settings.user.size %></td>
+  <td class="name"><%= user.name %></td>
+  <td class="email"><%= user.email %></td>
+  <td class="service"><%= user.role %></td>
+  <td class="action">
+    <% if can? :update, user %>
+      <% if user.admin? %>
+        <%= link_to t("admin.users.set_user"), admin_user_path(user, 
+          role: :user), method: :put, class: "btn btn-primary" %>
+      <% else %>
+        <%= link_to t("admin.users.set_admin"), admin_user_path(user, 
+          role: :admin), method: :put, class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+
+    <% if can? :destroy, user %>
+      <%= link_to t(".delete"), [:admin, user], method: :delete,
+        data: {confirm: t(".confirm_delete", name: user.name)}, 
+        class: "btn btn-danger" %>
+    <% end %>
+  </td>
+</tr>

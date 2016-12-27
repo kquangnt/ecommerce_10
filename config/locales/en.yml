@@ -39,3 +39,36 @@ en:
     my_address: "Ngo Sy Lien Street, Da Nang City"
   home:
     ecommerce: "Ecommerce"
+    
+  admin:
+    base:
+      denied: "You have not permission"
+      no_loggin_error: "Please login before action!"
+    users:
+      set_user: "Set user"
+      set_admin: "Set admin"
+      max_size_error: "Maximum file size is 5MB. Please choose a smaller file."
+      update:
+        updated: "Set %{role} for account successfully"
+        error: "Set %{role} for account fail"  
+        set_user: "Set user"
+        set_admin: "Set admin"
+      destroy:
+        not_found: "The user not found"
+        deleted: "User's deleted successful"
+        error: "Delete user unsuccessful"
+      index:
+        denied: "Access denied"
+        pls_login: "Please login"
+        all_users: "All users"
+        index: "Index"
+        avatar: "Avatar"
+        name: "Name"
+        email: "Email"
+        service: "Service"
+        action: "Action"
+      user:
+        admin: "Admin"
+        user: "User"
+        confirm_delete: "User '%{name}' will be deleted. Are you sure to 
+          continue?"
