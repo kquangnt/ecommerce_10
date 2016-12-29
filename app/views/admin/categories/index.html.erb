@@ -1,0 +1,24 @@
+<% provide :title, t(".all_categories") %>
+<div class="col-md-8 col-md-offset-2">
+  <h1><%= t ".all_categories" %></h1>
+  <%= link_to t(".add_category"), new_admin_category_path,
+    class: "btn btn-success" %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr class="display-category">
+        <th class="index"><%= t ".index" %></th>
+        <th class="name"><%= t ".name" %></th>
+        <th class="total-product"><%= t ".product" %></th>
+        <th class="total-suggestion"><%= t ".suggestion" %></th>
+        <th class="action"><%= t ".action" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @categories %>
+    </tbody>
+  </table>
+</div>
+
+<div class="paginate">
+  <%= will_paginate @categories %>
+</div>

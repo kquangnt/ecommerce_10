@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161221160046) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.string   "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -61,6 +62,7 @@ ActiveRecord::Schema.define(version: 20161221160046) do
     t.text     "description"
     t.string   "image"
     t.integer  "price"
+    t.string   "deleted_at"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -82,6 +84,7 @@ ActiveRecord::Schema.define(version: 20161221160046) do
     t.string   "image"
     t.text     "description"
     t.integer  "status", default: 0
+    t.string   "deleted_at"
     t.integer  "user_id"
     t.integer  "category_id"
     t.datetime "created_at", null: false
