@@ -142,7 +142,7 @@ tr.display-users{
   }
   th.action {
     text-align: center;
-    width: 200px;
+    width: 150px;
   }
 }
 tr.user {
@@ -160,6 +160,52 @@ tr.user {
   }
   td.action {
     text-align: left;
+    width: 150px;
+  }
+}
+/* Category */
+
+.table {
+  margin-top: 10px;
+  th {
+    width: 150px;
+  }
+}
+.add-category {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+tr.display-category{
+  background: #394BA0;
+  border: 2px solid #a1a1a1; 
+  color:white;
+  
+  th.index {
+    text-align: center;
+    width: 110px;
+  }
+  th.total-product {
+    text-align: center;
+    width: 150px;
+  }
+  th.total-suggestion {
+    text-align: center;
+    width: 200px;
+  }
+}
+
+tr.category {
+  td.index {
+    text-align: center;
+    width: 110px;
+  }
+  td.total-product {
+    text-align: center;
+    width: 150px;
+  }
+  td.total-suggestion {
+    text-align: center;
     width: 200px;
   }
 }

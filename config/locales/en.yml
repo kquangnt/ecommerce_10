@@ -39,7 +39,6 @@ en:
     my_address: "Ngo Sy Lien Street, Da Nang City"
   home:
     ecommerce: "Ecommerce"
-    
   admin:
     base:
       denied: "You have not permission"
@@ -72,3 +71,40 @@ en:
         user: "User"
         confirm_delete: "User '%{name}' will be deleted. Are you sure to 
           continue?"
+    categories:
+      not_found: "The category not found"
+      category:
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Category %{name} have %{product} products and %{suggestion} suggestions.
+          Do you to delete it?"
+      create:
+        created: "Category create successful"
+        create_error: "Create category fail"
+      destroy:
+        deleted: "Category delete successful"
+        delete_error: "Delete category fail"
+        relationship_error: "Can not delete this Category because it has some products or
+          some suggestions. Please delete it first."
+      edit:
+        edit: "Edit category: '%{name}'"
+        save_changes: "Save changes"
+      form:
+        name: "Category:"
+        name_holder: "Type category"
+        cancel: "Cancel"
+      index:
+        placeholder: "Enter to search..."
+        all_categories: "All categories"
+        add_category: "Add category"
+        index: "Id"
+        name: "Name"
+        product: "Products"
+        suggestion: "Suggestions" 
+        action: "Action"
+        pls_login: "Please login"
+      new:
+        add_category: "Add category"
+      update:
+        failed: "Category update failed"
+        updated: "Category update successful"

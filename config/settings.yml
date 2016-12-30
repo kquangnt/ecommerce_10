@@ -7,3 +7,6 @@ user:
   image_max_size: 5242880
   size: 50
   image_accept: "image/jpeg,image/gif,image/png"
+category:
+  per_page: 10
+  name_max_length: 255 
