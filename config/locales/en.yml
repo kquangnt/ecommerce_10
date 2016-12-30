@@ -108,3 +108,37 @@ en:
       update:
         failed: "Category update failed"
         updated: "Category update successful"
+    products:
+      index: "Index"
+      image: "Image"
+      name: "Name"
+      description: "Description"
+      price: "Price"
+      price_format: "%{price} (vnd)"
+      category: "Category"
+      max_size_error: "should be less than 5MB"
+      index:
+        all_products: "All products"
+      product:
+        detail: "Detail"
+        edit: "Edit"
+        delete: "Delete"
+        confirm_delete: "Product %{name} has %{comments} comments. Are you sure to
+          delete it?"
+      new:
+        add_product: "Add a new product"
+        create_product: "Create"
+      create:
+        created: "Created product successful"
+        create_error: "Create product fail"
+      edit:
+        edit_product: "Edit product"
+        save_changes: "Save changes"
+      update:
+        update_error: "Update product failed"
+        updated: "Updated product successful"
+      destroy:
+        deleted: "Deleted product successful"
+        delete_error: "Delete product fail"
+      load_data:
+        not_found: "The product not found"

@@ -1,0 +1,17 @@
+<tr class="product">
+  <td class="index"><%= index_for product_counter, @products.current_page,
+    Settings.product.per_page %></td>
+  <td class="image"><%= image_tag product.image.url, size: Settings.product.size %></td>  
+  <td class="name"><%= product.name %></td>
+  <td class="category"><%= product.category.name %></td>
+  <td class="description"><%= product.description %></td>
+  <td class="price"><%= t("admin.products.price_format", 
+     price: (number_to_currency product.price, precision: 0)) %></td>
+  <td class="action">
+   <%= link_to t("admin.products.product.edit"), edit_admin_product_path(product.id),
+      class: "btn btn-primary btn-action" %>
+    <%= link_to t("admin.products.product.delete"), [:admin, product], method: :delete,
+      data: {confirm: t("admin.products.product.confirm_delete", name: product.name,
+        comments: product.comments.size)}, class: "btn btn-danger btn-action" %>
+  </td>
+</tr>

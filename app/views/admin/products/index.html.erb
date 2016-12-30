@@ -1,0 +1,26 @@
+<% provide :title, t(".all_products") %>
+<h1><%= t ".all_products" %></h1>
+<div class="md-col-12 ">
+  <%= link_to t(".add_product"), new_admin_product_path,
+    class: "btn btn-success" %>
+</div>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr class="display-product">
+      <th class="index"><%= t ".index" %></th>
+      <th class="image"><%= t ".image" %></th>
+      <th class="name"><%= t ".name" %></th>
+      <th class="category"><%= t ".category" %></th>
+      <th class="description"><%= t ".description" %></th>
+      <th class="price"><%= t ".price" %></th>
+      <th class="action"><%= t ".action" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @products %>
+  </tbody>
+</table>
+
+<div class="paginate">
+  <%= will_paginate @products %>
+</div>

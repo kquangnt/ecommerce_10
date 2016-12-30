@@ -1,0 +1,32 @@
+<%= form_for [:admin, @product], html: {multipart: true, 
+  class: "form-horizontal product-form", id: "product_form"} do |f| %>
+  <%= render "shared/error_messages", object: @product %>
+  <div class="control-group">
+    <%= f.label :category %>
+    <%= f.select :category_id, options_for_select(
+      @categories.collect{|category| [category.name, category.id]},
+      params[:category_id]), {}, {class: "form-control"} %>
+  </div>
+  <div class="control-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: Settings.product.area_rows, 
+      class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, accept: Settings.product.image_accept %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit yield(:button_text), class: "btn btn-primary",
+      id: "btn_product" %>
+    <%= link_to t(".cancel"), admin_products_path, class: "btn btn-default" %>
+  </div>
+<% end %>
