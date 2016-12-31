@@ -17,6 +17,9 @@ class PictureUploader < CarrierWave::Uploader::Base
     elsif model.class.name == Product.name
       ActionController::Base.helpers.asset_path("fallback/" + 
         [version_name, "product_default.jpg"].compact.join('_'))
+    elsif model.class.name == Suggestion.name
+      ActionController::Base.helpers.asset_path("fallback/" + 
+        [version_name, "new_product_default.jpg"].compact.join('_'))
     end
   end
 

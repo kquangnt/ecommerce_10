@@ -1,0 +1,26 @@
+<tr class="suggestion">
+  <td class="index"><%= index_for suggestion_counter,
+    @processing_suggestions.current_page, Settings.suggestion.per_page %></td>
+  <td class="image"><%= image_tag suggestion.image.url, 
+    size: Settings.suggestion.size %></td> 
+  <td class="name"><%= suggestion.product %></td>
+  <td class="category"><%= suggestion.category.name %></td>
+  <td class="description"><%= suggestion.description %></td>
+  <td class="status">
+    <% if suggestion.processing? %>
+      <%= link_to t("admin.suggestions.accept"), admin_suggestion_path(suggestion,
+        value: :accepted), method: :put, class: "btn btn-success" %> 
+      <%= link_to t("admin.suggestions.reject"), admin_suggestion_path(suggestion,
+        value: :rejected), method: :put, class: "btn btn-danger" %>
+    <% else %>
+      <%= suggestion.status %>
+    <% end %>
+  </td>
+  <td class="action">
+    <% if can? :destroy, suggestion %>
+      <%= link_to t("suggestions.destroy.btn_delete"), [:admin, suggestion], 
+        method: :delete, data: {confirm: t("suggestions.destroy.confirm_delete",
+          name: suggestion.product)}, class: "btn btn-danger btn-action" %>
+    <% end %>
+  </td>
+</tr>

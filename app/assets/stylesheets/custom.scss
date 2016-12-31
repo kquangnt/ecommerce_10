@@ -284,3 +284,84 @@ h1.edit_product {
 .paginate {
   text-align: center;
 }
+
+/* Suggestion */
+
+.suggestion_title {
+  text-align: center;
+}
+.suggestion_image {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.table {
+  margin-top: 10px;
+}
+.add-suggestion {
+  margin: 10px;
+}
+
+tr.display-suggestion {
+  background: #394BA0;
+  border: 2px solid #a1a1a1; 
+  color: white;
+  
+  th.index {
+    text-align: center;
+    width: 70px;
+  }
+  th.image {
+    text-align: center;
+    width: 90px;
+  }
+  th.name {
+    text-align: center;
+  }
+  th.category {
+    width: 150px;
+  }
+  th.description {
+    width: 300px;
+ }
+  th.status {
+    text-align: center;
+    width: 200px;
+  }
+  th.action {
+    text-align: center;
+    width: 120px;
+  }
+}
+tr.suggestion {
+  td.index {
+    text-align: center;
+    width: 70px;
+  }
+  td.image {
+    text-align: center;
+    width: 90px;
+  }
+  td.category {
+    width: 150px;
+  }
+  td.description {
+    width: 300px;
+  }
+  td.status {
+    text-align: center;
+    width: 200px;
+  }  
+  td.action {
+    text-align: center;
+    width: 120px;
+  }
+}
+h1.add_suggestion{
+  text-align: center;
+}
+.form-actions {
+ text-align: center;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
