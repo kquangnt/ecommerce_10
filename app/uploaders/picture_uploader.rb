@@ -14,6 +14,9 @@ class PictureUploader < CarrierWave::Uploader::Base
     if model.class.name == User.name
       ActionController::Base.helpers.asset_path("fallback/" + 
         [version_name, "avata_default.png"].compact.join('_'))
+    elsif model.class.name == Product.name
+      ActionController::Base.helpers.asset_path("fallback/" + 
+        [version_name, "product_default.jpg"].compact.join('_'))
     end
   end
 

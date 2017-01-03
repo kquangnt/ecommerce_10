@@ -10,3 +10,11 @@ user:
 category:
   per_page: 10
   name_max_length: 255 
+product:
+  per_page: 10
+  name_max_length: 50
+  description_max_length: 1000
+  area_rows: 3
+  image_accept: "image/jpeg,image/gif,image/png"
+  size: 50
+  image_max_size: 5242880
