@@ -29,6 +29,11 @@ en:
     profile: "Profile"
     activity: "Activity"
     password: "Password"
+    users: "Users"
+    categories: "Categories"
+    products: "Products"
+    suggestions: "Suggestions"
+    orders: "Orders"
   footer:
     design: "Design by"
     ecommerce: " Ecommerce"
@@ -142,3 +147,52 @@ en:
         delete_error: "Delete product fail"
       load_data:
         not_found: "The product not found"
+    suggestions:
+      pocessing: "Processing"
+      reject: "Reject"
+      accept: "Accept"
+      rejected: "Rejected"
+      accepted: "Accepted"
+      index:
+        all_suggestions: "All suggestions"
+        add_suggestion: "Add a new Suggestion"
+        index: "Index"
+        product: "Product"
+        image: "Image"
+        description: "Description"
+        cancel_button: "Cancel"
+        status: "Status"
+        action: "Action"
+      update:
+        update_success: "You have %{status} the %{product} successful"
+        update_fail: "You have %{status} the %{product} unsuccessful"
+      destroy:
+        btn_delete: "Delete"
+        confirm_delete: "The product %{name} will be deleted. Do you want to continue?"
+        destroy_success: "Delete this request successful"
+        destroy_error: "Delete this request unsuccessful"
+  suggestions:
+    not_found: "Not not_found"
+    max_size_error: "should be less than 5MB"
+    index:
+      all_suggestions: "All suggestions"
+      add_suggestion: "Add a new Suggestion"
+      index: "Index"
+      product: "Product"
+      image: "Image"
+      description: "Description"
+      cancel_button: "Cancel"
+      status: "Status"
+      action: "Action"
+    new:
+      title: "New Requests"
+      add_suggestion: "Add a new request"
+      create_button: "Send request"
+    create:
+      create_success: "Create request successful"
+      create_error: "Create request unsuccessful"
+    destroy:
+      btn_delete: "Delete"
+      confirm_delete: "The product %{name} will be deleted. Do you want to continue?"
+      destroy_success: "Delete this request successful"
+      destroy_error: "Delete this request unsuccessful"

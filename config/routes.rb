@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :users, only: [:index, :destroy, :update]
     resources :categories
     resources :products, except: :show
+    resources :suggestions, only: [:index, :update, :destroy]
   end
 end
