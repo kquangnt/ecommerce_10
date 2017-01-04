@@ -23,6 +23,7 @@ en:
   header:
     logo: "Ecommerce"
     home: "Home"
+    cart: "Shopping cart"
     signup: "Sign up"
     login: "Login"
     logout: "Logout"
@@ -57,6 +58,21 @@ en:
     category: "Category"
     description: "Description"
     thanks_for_rating: "Thanks for rating!"
+    add-to-cart: "Add to cart"
+    quantity: "Quantity"
+  carts:
+    confirm_delete: "Product %{name} will be deleted. Do you to delete it?"
+    delete_successful: "Delete successfully"
+    index:
+      cart_title: "List carts"
+      lbl_product: "Product"
+      lbl_price: "Price"
+      lbl_total: "Total price:"
+      lbl_total_price: "Total price"
+      lbl_option: "Option"
+      lbl_quantity: "Quantity"
+      btn_cancel: "Cancel"
+      btn_order: "Order"
   admin:
     base:
       denied: "You have not permission"

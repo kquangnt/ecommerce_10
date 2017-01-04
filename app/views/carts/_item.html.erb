@@ -1,0 +1,23 @@
+<% @products.each do |product, quantity| %>
+  <% if product %>
+    <tr>
+      <td class="center">
+        <%= link_to product do %>
+          <%= image_tag product.image, alt: product.name,
+            class: "product-thumbnail", size: Settings.cart.size %>
+          <%= product.name %>
+        <% end %>
+      </td>
+      <td class="center"><%= quantity %></td>
+      <td class="center"><%= number_to_currency product.price, 
+        precision: Settings.product.precision %></td>
+      <td class="center">
+        <%= number_to_currency Accounting.item_total_cost(product.price,
+          quantity), precision: Settings.product.precision %></td>
+      <td class="center">
+        <%= link_to t(".delete"), cart_path(product.id), method: :delete, 
+          data: {confirm: t("carts.confirm_delete", name: product.name)} %>
+      </td>
+    </tr>
+  <% end %>
+<% end %>

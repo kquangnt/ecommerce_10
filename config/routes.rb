@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   resources :suggestions, except: [:edit, :update, :show]
   resources :products, only: [:index, :show]
+  resources :carts, except: [:edit, :update, :show]
 end

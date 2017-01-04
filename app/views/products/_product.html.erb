@@ -7,8 +7,14 @@
     <h4><%= link_to product.name, product_path(product) %></h4>
     <h5><i><b><%= number_to_currency product.price,
       precision: Settings.product.precision %></b></i></h5>
-    <h5><i><b><%= link_to content_tag(:i, t("products.add_to_cart"), 
-      class: "glyphicon glyphicon-shopping-cart"), "#" %></b></i></h5>
+    <%= form_tag carts_path do %>
+      <%= hidden_field_tag :product_id, product.id %>
+      <%= hidden_field_tag :quantity, Settings.cart.init_quantity %>
+      <%= button_tag class: "btn btn-primary" do %>
+        <i class="glyphicon glyphicon-shopping-cart"></i>
+        <%= t "products.add_to_cart" %>
+      <% end %>
+    <% end %>
   </div>
   </div>
 </div>

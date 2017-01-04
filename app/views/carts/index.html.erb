@@ -1,0 +1,41 @@
+<% provide :title, t(".cart_title") %>
+
+<div class="wrapper">
+  <div class="col-md-8 list-cart">
+    <table class="table table-hover" id="cart-table">
+      <thead>
+        <th class="center"><%= t ".lbl_product" %></th>
+        <th class="center"><%= t ".lbl_quantity" %></th>
+        <th class="center"><%= t ".lbl_price" %></th>
+        <th class="center"><%= t ".lbl_total_price" %></th> 
+        <th class="center"><%= t ".lbl_option" %></th>
+      </thead>
+      <tbody>
+        <% if @products.any? %>
+          <%= render "carts/item" %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-5">
+        <h3><%= t ".lbl_total" %></h3>
+      </div>
+      <div class="col-md-7">
+        <h3 class="total-price">
+          <%= number_to_currency Accounting.cart_total_cost(@products),
+            precision: Settings.product.precision %>
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 center">
+        <%= link_to t(".btn_order"), "#", class: "btn btn-success" %>
+      </div>
+      <div class="col-md-6 center">
+        <%= link_to t(".btn_cancel"), new_cart_path, class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>

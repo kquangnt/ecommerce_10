@@ -34,3 +34,8 @@ status:
   processing: "processing"
   rejected: "rejected"
   accepted: "accepted"
+cart:
+  init_quantity: 1
+  quantity: "quantity"
+  minimum_quantity: 1
+  size: 150
