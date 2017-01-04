@@ -1,0 +1,45 @@
+<% provide :title, t("products.header", name: @product.name) %>
+
+<div class="container-fluid product-detail">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-3">
+      <div class="product_image">
+        <%= image_tag @product.image.url, size: Settings.product.size_big  %>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <table class="table ">
+        <theader>
+          <tr>
+            <th><%= t "products.name" %></th>
+            <td><%= @product.name %></td>
+          </tr>
+        </theader>
+        <tbody>
+          <tr>
+            <th><%= t "products.category" %></th>
+            <td><%= @product.category_name %></td>
+          </tr>
+          <tr>
+            <th><%= t "products.description" %></th>
+            <td><%= @product.description %></td>
+          </tr>
+          <tr>
+            <th><%= t "products.lbl_price" %></th>
+            <td><%= number_to_currency @product.price,
+              precision: Settings.product.precision %></td>
+          </tr>
+          <tr>
+            <th><%= t "products.rating" %></th>
+            <td><%= @product.avg_rating %></td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <div class="action">
+        <h3><%= link_to content_tag(:i, t("products.add_to_cart"), 
+          class: "glyphicon glyphicon-shopping-cart"), "#" %></h3>   
+      </div>
+    </div>
+  </div>
+</div>

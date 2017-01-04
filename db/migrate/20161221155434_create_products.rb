@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :image
       t.integer :price
       t.string :deleted_at
+      t.float :avg_rating
       t.references :category, foreign_key: true
 
       t.timestamps

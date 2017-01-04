@@ -22,9 +22,11 @@ Category.create!(name: "House")
 30.times do |n|
   name  = "Product #{n+1}"
   price = (rand 100..10000)*1000
+  avg_rating = rand 1..5
   category_id = rand 1..5
   description = Faker::Lorem.sentence 30
-  Product.create!(name: name, price: price, category_id: category_id, description: description)
+  Product.create!(name: name, price: price, category_id: category_id, 
+    avg_rating: avg_rating, description: description)
 end
 
 30.times do |n|

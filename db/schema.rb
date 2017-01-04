@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20161221160046) do
     t.string   "image"
     t.integer  "price"
     t.string   "deleted_at"
+    t.float    "avg_rating"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
