@@ -1,0 +1,28 @@
+<%= form_for @suggestion, html: {multipart: true, 
+  class: "form-horizontal suggestion-form", id: "suggestion_form"} do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="control-group">
+    <%= f.label :category %>
+    <%= f.select :category_id, options_for_select(
+      @categories.collect{|category| [category.name, category.id]},
+      params[:category_id]), {}, {class: "form-control"} %>
+  </div>
+  <div class="control-group">
+    <%= f.label :product %>
+    <%= f.text_field :product, class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: Settings.suggestion.area_rows, 
+      class: "form-control" %>
+  </div>
+  <div class="control-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, accept: Settings.suggestion.image_accept %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit yield(:button_text), class: "btn btn-primary",
+      id: "btn_suggestion" %>
+    <%= link_to t(".cancel"), suggestions_path, class: "btn btn-default" %>
+  </div>
+<% end %>

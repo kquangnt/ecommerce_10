@@ -26,3 +26,12 @@ Category.create!(name: "House")
   description = Faker::Lorem.sentence 30
   Product.create!(name: name, price: price, category_id: category_id, description: description)
 end
+
+30.times do |n|
+  name  = "Suggest product #{n+1}"
+  category_id = rand 1..5
+  user_id = rand 3..10
+  description = Faker::Lorem.sentence 30
+  Suggestion.create!(product: name, category_id: category_id, user_id: user_id,
+    description: description)
+end
