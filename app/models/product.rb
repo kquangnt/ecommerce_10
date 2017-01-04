@@ -10,11 +10,16 @@ class Product < ApplicationRecord
   validates :description, presence: true,
     length: {maximum: Settings.product.description_max_length}
   validates :price, presence: true, numericality: {only_integer: true}
-   
-  scope :order_date_desc, ->{order created_at: :desc}
+  validate :image_size
 
   mount_uploader :image, PictureUploader
-  validate :image_size
+  
+  delegate :name, to: :category, prefix: true, allow_nil: true
+ 
+  scope :order_date_desc, ->{order created_at: :desc}
+  scope :filter_category, ->category_id do
+    where category_id: category_id if category_id.present?
+  end
   
   private
   def image_size

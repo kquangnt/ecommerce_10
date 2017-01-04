@@ -34,6 +34,7 @@ en:
     products: "Products"
     suggestions: "Suggestions"
     orders: "Orders"
+    list_categories: "List categories"
   footer:
     design: "Design by"
     ecommerce: " Ecommerce"
@@ -44,6 +45,18 @@ en:
     my_address: "Ngo Sy Lien Street, Da Nang City"
   home:
     ecommerce: "Ecommerce"
+  products:
+    header: "%{name}"
+    list: "List products"
+    title: "List products"
+    price: "%{price} (vnd)"
+    add_to_cart: " Add to cart"
+    name: "Product name"
+    lbl_price: "Price"
+    rate: "rate"
+    category: "Category"
+    description: "Description"
+    thanks_for_rating: "Thanks for rating!"
   admin:
     base:
       denied: "You have not permission"

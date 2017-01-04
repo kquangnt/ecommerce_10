@@ -8,4 +8,6 @@ Rails.application.routes.draw do
     resources :products, except: :show
     resources :suggestions, only: [:index, :update, :destroy]
   end
+  resources :suggestions, except: [:edit, :update, :show]
+  resources :products, only: [:index, :show]
 end

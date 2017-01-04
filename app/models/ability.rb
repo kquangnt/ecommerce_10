@@ -13,6 +13,10 @@ class Ability
       end
     else
       can :read, :all
+      can :create, Suggestion
+      can :destroy, Suggestion do |suggestion|
+        suggestion.status == Settings.status.processing 
+      end
     end
   end
 end

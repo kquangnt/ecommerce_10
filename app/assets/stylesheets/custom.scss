@@ -40,7 +40,7 @@ h1 {
 }
 
 #logo-icon {
-  width: 45                                                                                     px;
+  width: 45px;
   height: 30px;
 }
 
@@ -364,4 +364,27 @@ h1.add_suggestion{
  text-align: center;
  margin-top: 10px;
  margin-bottom: 10px;
+}
+
+/*product*/
+ 
+ .frame-product {
+  border-radius: 5px;
+  background-color: #e1e1e1;
+  margin: 5px;
+  .image {
+    border-radius: 5px;
+    height: 80%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .information {
+    margin-left: 10px;
+    height: 20%;
+  }
+}
+
+/*product detail*/
+.product-detail {
+  margin-top: 20px;
 }
