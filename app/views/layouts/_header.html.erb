@@ -37,8 +37,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to t("header.activity"), "#" %></li>
-                <li><%= link_to t("header.profile"), "#" %></li>
-                <li><%= link_to t("header.password"), edit_user_registration_path %></li>
+                <li><%= link_to t("header.profile"), user_path(current_user) %></li>
+                <li><%= link_to t("header.setting"), edit_user_registration_path %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to t("header.logout"), destroy_user_session_path, method: :delete %>

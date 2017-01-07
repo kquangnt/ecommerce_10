@@ -1,16 +1,21 @@
 User.create!(name: "Admin account", email: "admin@gmail.com",
-  password: "admin123", role: 2, password_confirmation: "admin123")
+  password: "admin123", role: 2, password_confirmation: "admin123", 
+  address: "123 Nguyen Luong Bang", phone_number: "098732232")
 User.create!(name: "Admin account", email: "admin1@gmail.com",
-  password: "admin123", role: 1, password_confirmation: "admin123")
+  password: "admin123", role: 1, password_confirmation: "admin123",
+  address: "12 Bach Dang", phone_number: "01233291821")
 User.create!(name: "User account", email: "user@gmail.com",
-  password: "user123", role: 0, password_confirmation: "user123")
+  password: "user123", role: 0, password_confirmation: "user123",
+  address: "123 Ngo Thi Nham", phone_number: "0987138191")
 
 30.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@gmail.com"
+  address = "#{n+1} Le Duan"
+  phone_number = "0988777666"
   password = "password"
-  User.create!(name: name, email: email, password: password,
-    password_confirmation: password)
+  User.create!(name: name, email: email, password: password, address: address,
+    password_confirmation: password, phone_number: phone_number )
 end
 
 Category.create!(name: "Electronics")

@@ -10,11 +10,16 @@ class User < ApplicationRecord
   
   enum role: [:user, :admin, :manager]
 
-  validates :name, presence: true, length: {maximum: 50}
+  validates :name, presence: true, length: {maximum: Settings.user.name_max_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  validates :email, presence: true, length: {maximum: 255}, 
+  VALID_PHONE_NUMBER_REGEX = /\d[0-9]\)*\z/
+  validates :email, presence: true, length: {maximum: Settings.user.email_max_length},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
-  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
+  validates :phone_number, presence: true, 
+    length: {maximum: Settings.user.phone_number_max_length}, 
+    format: {with: VALID_PHONE_NUMBER_REGEX}
+  validates :password, presence: true, length: {minimum: Settings.user.min_password},
+    allow_nil: true
 
   scope :order_desc, ->{order created_at: :desc}
 

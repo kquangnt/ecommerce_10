@@ -112,6 +112,8 @@ ActiveRecord::Schema.define(version: 20161221160046) do
     t.string   "name"
     t.string   "image"
     t.integer  "role",                   default: 0
+    t.string   "phone_number"
+    t.string   "address"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

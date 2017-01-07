@@ -17,6 +17,9 @@ class Ability
       can :destroy, Suggestion do |suggestion|
         suggestion.status == Settings.status.processing 
       end
+      can :edit, User do |user_account|
+        user_account == user
+      end
     end
   end
 end
