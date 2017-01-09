@@ -33,13 +33,22 @@
             <th><%= t "products.rating" %></th>
             <td><%= @product.avg_rating %></td>
           </tr>
+          <tr>
+            <th><%= t "products.quantity" %></th>
+            <td>
+              <%= form_tag carts_path do %>
+                <%= hidden_field_tag :product_id, @product.id %>
+                <%= number_field_tag :quantity, Settings.cart.init_quantity,
+                  min: Settings.cart.minimum_quantity, class: "quantity" %>
+                <%= button_tag class: "btn btn-primary" do %>
+                  <i class="glyphicon glyphicon-shopping-cart"></i>
+                  <%= t "products.add_to_cart" %>
+                <% end %>
+              <% end %>
+            </td>
+          </tr>
         </tbody>
       </table>
-      
-      <div class="action">
-        <h3><%= link_to content_tag(:i, t("products.add_to_cart"), 
-          class: "glyphicon glyphicon-shopping-cart"), "#" %></h3>   
-      </div>
     </div>
   </div>
 </div>
