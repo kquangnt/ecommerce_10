@@ -11,6 +11,16 @@
     </div>
 
     <div class="field form-group">
+      <%= f.label :address %><br />
+      <%= f.text_field :address, class: "form-control", autofocus: true %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :phone_number %><br />
+      <%= f.text_field :phone_number, class: "form-control", autofocus: true %>
+    </div>
+
+    <div class="field form-group">
       <%= f.label :email %><br />
       <%= f.email_field :email, class: "form-control", autofocus: true %>
     </div>
